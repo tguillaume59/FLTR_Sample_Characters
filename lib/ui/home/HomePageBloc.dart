@@ -1,15 +1,18 @@
+import 'package:Sample_Characters/services/characters/MyDataBase.dart';
+import 'package:get_it/get_it.dart';
+import 'package:Sample_Characters/services/characters/models/Character.dart';
 import 'package:Sample_Characters/ui/common/base_classes/blocs/BaseBloc.dart';
 
 class HomePageBloc implements BaseBloc{
 
   HomePageBloc();
 
-  int _counter = 0;
+  MyDatabase _database = GetIt.I.get<MyDatabase>();
 
-  int getCounter() => _counter ;
+  List<Character> listCharacters = new List();
 
-  void incrementCounter(){
-    _counter ++;
+  void loadData(){
+    listCharacters = _database.getAllCharacters();
   }
 
   @override
