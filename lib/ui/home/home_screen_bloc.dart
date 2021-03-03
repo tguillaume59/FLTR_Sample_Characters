@@ -3,8 +3,8 @@ import 'package:get_it/get_it.dart';
 import 'package:Sample_Characters/services/characters/models/character.dart';
 import 'package:Sample_Characters/ui/common/base_classes/blocs/base_bloc.dart';
 
-class HomePageBloc implements BaseBloc {
-  HomePageBloc();
+class HomeScreenBloc implements BaseBloc {
+  HomeScreenBloc();
 
   CharacterRepository _characterRepository = GetIt.I.get<CharacterRepository>();
 

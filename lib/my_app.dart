@@ -1,5 +1,5 @@
-import 'package:Sample_Characters/ui/home/home_page.dart';
-import 'package:Sample_Characters/ui/home/home_page_bloc.dart';
+import 'package:Sample_Characters/ui/home/home_screen.dart';
+import 'package:Sample_Characters/ui/home/home_screen_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get_it/get_it.dart';
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(title: 'Flutter Demo Home Page', homePageBloc: GetIt.I.get<HomePageBloc>()),
+      home: HomeScreen(homeScreenBloc: GetIt.I.get<HomeScreenBloc>()),
 
     );
   }
