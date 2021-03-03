@@ -1,0 +1,6 @@
+enum SexEnum {
+  BOY,
+  GIRL,
+  EXTRATERRESTRIAL,
+  OTHER
+}

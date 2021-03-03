@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'MyApp.dart';
-import 'dependencies_injection/DependenciesInjectionModule.dart';
+import 'my_app.dart';
+import 'dependencies_injection/dependencies_injection_module.dart';
 
 void main() async {
 
