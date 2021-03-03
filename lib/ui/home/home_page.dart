@@ -1,26 +1,26 @@
 import 'package:Sample_Characters/services/characters/models/character.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'home_page_bloc.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key, this.title}) : super(key: key);
+  HomePage({Key key, this.title, this.homePageBloc}) : super(key: key);
+
+  final HomePageBloc homePageBloc;
 
   final String title;
 
   @override
-  _HomePageState createState() => _HomePageState(GetIt.I.get<HomePageBloc>());
+  _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  final HomePageBloc homePageBloc;
 
-  _HomePageState(this.homePageBloc);
+  _HomePageState();
 
   @override
   void initState() {
     super.initState();
-    homePageBloc.loadData();
+    widget.homePageBloc.loadData();
   }
 
   @override
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
             // Center is a layout widget. It takes a single child and positions it
             // in the middle of the parent.
             child: ListView.builder(
-          itemCount: homePageBloc.listCharacters.length,
+          itemCount: widget.homePageBloc.listCharacters.length,
           itemBuilder: (context, index) {
             return Card(
               elevation: 5,
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                               topLeft: Radius.circular(5)),
                           image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: NetworkImage(homePageBloc
+                              image: NetworkImage(widget.homePageBloc
                                   .listCharacters[index].pictureUrl))),
                     ),
                     //end region image view
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                               padding:
                                   const EdgeInsets.fromLTRB(0, 12.0, 12.0, 6.0),
                               child: Text(
-                                homePageBloc.listCharacters[index]
+                                widget.homePageBloc.listCharacters[index]
                                     .getFullName(),
                                 style: TextStyle(
                                     fontSize: 22.0,
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                             Padding(
                               padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                               child: Text(
-                                _getJob(homePageBloc.listCharacters[index]),
+                                _getJob(widget.homePageBloc.listCharacters[index]),
                                 style: TextStyle(
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.normal),
