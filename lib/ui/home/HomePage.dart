@@ -53,7 +53,8 @@ class _HomePageState extends State<HomePage> {
                               topLeft: Radius.circular(5)),
                           image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: NetworkImage(homePageBloc.listCharacters[index].pictureUrl))),
+                              image: NetworkImage(homePageBloc
+                                  .listCharacters[index].pictureUrl))),
                     ),
                     //end region image view
                     Container(
