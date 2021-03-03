@@ -1,7 +1,7 @@
 import 'package:get_it/get_it.dart';
-import 'package:Sample_Characters/services/characters/database/MyDataBase.dart';
-import 'package:Sample_Characters/services/characters/models/Character.dart';
-import 'package:Sample_Characters/services/characters/repositories/CharacterRepository.dart';
+import 'package:Sample_Characters/services/characters/database/my_database.dart';
+import 'package:Sample_Characters/services/characters/models/character.dart';
+import 'package:Sample_Characters/services/characters/repositories/character_repository.dart';
 
 class CharacterRepositoryImpl implements CharacterRepository {
   MyDatabase _database = GetIt.I.get<MyDatabase>();

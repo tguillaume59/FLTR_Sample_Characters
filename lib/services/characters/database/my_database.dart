@@ -1,6 +1,6 @@
 import 'dart:math';
-import 'package:Sample_Characters/services/characters/models/Character.dart';
-import '../models/SexEnum.dart';
+import 'package:Sample_Characters/services/characters/models/character.dart';
+import '../models/sex_enum.dart';
 
 class MyDatabase {
   List<Character> _listCharacter;

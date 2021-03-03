@@ -1,7 +1,7 @@
-import 'package:Sample_Characters/services/characters/models/Character.dart';
+import 'package:Sample_Characters/services/characters/models/character.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'HomePageBloc.dart';
+import 'home_page_bloc.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);

@@ -1,4 +1,4 @@
-import 'package:Sample_Characters/services/characters/models/Character.dart';
+import 'package:Sample_Characters/services/characters/models/character.dart';
 
 abstract class CharacterRepository {
   List<Character> getAllCharacters();

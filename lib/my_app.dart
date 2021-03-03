@@ -1,4 +1,4 @@
-import 'package:Sample_Characters/ui/home/HomePage.dart';
+import 'package:Sample_Characters/ui/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

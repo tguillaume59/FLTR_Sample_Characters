@@ -1,4 +1,4 @@
-import 'package:Sample_Characters/services/characters/models/SexEnum.dart';
+import 'package:Sample_Characters/services/characters/models/sex_enum.dart';
 
 class Character {
   int id = -1;
